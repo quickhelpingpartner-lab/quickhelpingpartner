@@ -1,1 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickHelpingPartner | QHP - Andhra's #1 Multi-Service App</title>
+    <meta name="description" content="QuickHelpingPartner (QHP) - Andhra's premier multi-service assistance, partner delivery, and quick logistics network. Better support for more people.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Color Palette Extracted Directly From image_85c428.jpg -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Exact Hex colors from the 4 interactive service nodes in image_85c428.jpg:
+                        qhpOrange: '#FF8C23',    /* Food Services Accent */
+                        qhpBlue: '#1F64E6',      /* Medicines & Primary UI Accent */
+                        qhpGreen: '#288235',     /* Grocery Hub Accent */
+                        qhpViolet: '#9C27B0',    /* Express Parcel Accent */
+                        qhpDark: '#0A1128',      /* High-contrast deep navy for readability */
+                        qhpBgLight: '#F4F7FC',   /* Soft grey-blue background shade matching dashboard panels */
+                    },
+                    fontFamily: {
+                        sans: ['Lexend', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-qhpDark font-sans antialiased selection:bg-qhpBlue selection:text-white">
 
+    <!-- 0. NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2 group">
+                <div class="bg-qhpBlue text-white font-bold text-xl tracking-wider px-3 py-1 rounded-xl shadow-md transition-transform group-hover:scale-105">QHP</div>
+                <span class="text-lg font-semibold tracking-wide text-qhpBlue hidden sm:inline-block">QuickHelpingPartner</span>
+            </a>
+            
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-sm font-medium text-qhpDark/70 hover:text-qhpBlue transition">Services</a>
+                <a href="#metrics" class="text-sm font-medium text-qhpDark/70 hover:text-qhpBlue transition">Our Impact</a>
+                <a href="#download" class="text-sm font-medium text-qhpDark/70 hover:text-qhpBlue transition">Download App</a>
+                <!-- Updated CTA targeting /service page -->
+                <a href="/service" class="bg-qhpBlue hover:bg-blue-700 text-white text-sm font-semibold px-6 py-3 rounded-xl transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Order Now</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-qhpDark focus:outline-none" aria-label="Toggle Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-4 space-y-4 shadow-inner">
+            <a href="#services" class="block text-sm font-medium text-qhpDark/70 hover:text-qhpBlue transition">Services</a>
+            <a href="#metrics" class="block text-sm font-medium text-qhpDark/70 hover:text-qhpBlue transition">Our Impact</a>
+            <a href="#download" class="block text-sm font-medium text-qhpDark/70 hover:text-qhpBlue transition">Download App</a>
+            <!-- Updated Mobile CTA targeting /service page -->
+            <a href="/service" class="block bg-qhpBlue hover:bg-blue-700 text-white text-center text-sm font-semibold px-5 py-3 rounded-xl transition">Order Now</a>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION WITH IMAGE FALLBACK & REDIRECT CTAs -->
+    <div class="relative w-full min-h-[85vh] flex flex-col items-center justify-center bg-qhpDark text-white px-6 py-20 overflow-hidden">
+        
+        <!-- Background Image Fallback matching standard operations -->
+        <div class="absolute inset-0 z-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1585738218165-45c03b6d050a?q=80&w=1920&auto=format&fit=crop');"></div>
+
+        <!-- Background Video Tag -->
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="absolute top-0 left-0 w-full h-full object-cover z-0 pointer-events-none opacity-25 transition-opacity duration-700"
+            onerror="this.style.opacity='0'">
+            <source src="bg-video.mp4" type="video/mp4">
+        </video>
+
+        <!-- Dynamic Gradient Overlay reflecting the image_85c428.jpg Blue & Violet spectrum -->
+        <div class="absolute inset-0 bg-gradient-to-b from-qhpDark/70 via-qhpViolet/30 to-qhpDark z-10"></div>
+        
+        <!-- Foreground Content -->
+        <div class="relative z-20 flex flex-col items-center max-w-4xl text-center">
+            <!-- Brand Tag Header matching Blue from dashboard -->
+            <div class="mb-6 flex items-center justify-center space-x-2">
+                <div class="bg-qhpBlue text-white font-bold text-2xl tracking-wider px-4 py-1.5 rounded-xl shadow-lg">QHP</div>
+                <span class="text-xl font-medium tracking-wide text-blue-200">QuickHelpingPartner</span>
+            </div>
+            
+            <!-- Updated Headline to Andhra's #1 -->
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-6">
+                Andhra’s #1 <br class="md:hidden"/>
+                <span class="text-qhpOrange">On-Demand Assistance</span> & Delivery App
+            </h1>
+            
+            <p class="text-base md:text-xl text-blue-100 font-light max-w-2xl mb-10">
+                Experience lightning-fast support, local partner management, and seamless micro-logistics right from the QHP workspace.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <!-- Get Started CTA redirected to /service page -->
+                <a href="/service" class="bg-qhpOrange hover:bg-amber-600 transition duration-200 text-white px-8 py-4 rounded-xl text-base font-semibold shadow-lg text-center transform hover:-translate-y-0.5">
+                    Get Started Now
+                </a>
+                <a href="#services" class="bg-white/10 hover:bg-white/20 transition duration-200 text-white border border-white/20 px-8 py-4 rounded-xl text-base font-medium text-center backdrop-blur-sm">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. VALUE PROPOSITION & LIVE METRICS SECTION -->
+    <div id="metrics" class="relative max-w-7xl mx-auto px-6 -mt-10 z-30 pb-16">
+        <div class="bg-white rounded-2xl border border-qhpBlue/10 p-6 md:p-8 shadow-[0px_10px_30px_rgba(31,100,230,0.08)] flex flex-col md:flex-row items-center justify-around gap-6 md:gap-4 backdrop-blur-xl">
+            
+            <!-- Partners: Blue Metric -->
+            <div class="flex items-center space-x-4 w-full justify-center md:justify-start md:w-auto transition-transform hover:scale-105">
+                <div>
+                    <div class="text-2xl md:text-3xl font-bold text-qhpBlue">3,00,000+</div>
+                    <div class="text-sm text-qhpDark/70 font-medium">Verified Partners</div>
+                </div>
+                <div class="text-qhpBlue bg-qhpBlue/5 p-3 rounded-xl">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                </div>
+            </div>
+            
+            <div class="hidden md:block h-12 border-l border-gray-150"></div>
+            
+            <!-- Cities Covered: Orange Metric -->
+            <div class="flex items-center space-x-4 w-full justify-center md:justify-start md:w-auto transition-transform hover:scale-105">
+                <div>
+                    <div class="text-2xl md:text-3xl font-bold text-qhpOrange">800+</div>
+                    <div class="text-sm text-qhpDark/70 font-medium">Cities Covered</div>
+                </div>
+                <div class="text-qhpOrange bg-qhpOrange/5 p-3 rounded-xl">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+            </div>
+            
+            <div class="hidden md:block h-12 border-l border-gray-150"></div>
+            
+            <!-- Assists Rendered: Green Metric -->
+            <div class="flex items-center space-x-4 w-full justify-center md:justify-start md:w-auto transition-transform hover:scale-105">
+                <div>
+                    <div class="text-2xl md:text-3xl font-bold text-qhpGreen">3 Billion+</div>
+                    <div class="text-sm text-qhpDark/70 font-medium">Assists Rendered</div>
+                </div>
+                <div class="text-qhpGreen bg-qhpGreen/5 p-3 rounded-xl">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- 3. BRAND SERVICES GRID -->
+    <div id="services" class="w-full bg-gradient-to-b from-qhpBgLight via-white to-white py-20 px-6">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <span class="text-xs uppercase font-semibold tracking-[0.2em] text-qhpBlue block mb-3">POWERING MODERN UTILITIES</span>
+            <h2 class="text-3xl md:text-5xl font-bold text-qhpBlue">What’s waiting for you inside QHP?</h2>
+            <p class="text-qhpDark/70 mt-4 max-w-xl mx-auto text-sm md:text-base font-light">
+                Our network operates dynamic service layers designed to structure, dispatch, and secure day-to-day assistance.
+            </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Service 1: Food (Matches Orange node from dashboard) -->
+            <div class="bg-white rounded-[24px] border-2 border-qhpOrange/15 p-6 flex flex-col items-center text-center transition duration-300 hover:-translate-y-2 shadow-sm hover:shadow-xl">
+                <div class="w-16 h-16 bg-qhpOrange/10 rounded-2xl flex items-center justify-center text-qhpOrange mb-6">
+                    <!-- Food/Cooking Fork & Spoon Icon -->
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-qhpDark mb-2">Food Services</h3>
+                <p class="text-qhpDark/70 text-sm font-light mb-6 flex-grow">We deliver any food from anywhere and any restaurant—even if the restaurant is not listed on Swiggy or Zomato.</p>
+                <a href="/service" class="text-sm font-semibold text-qhpOrange inline-flex items-center group">
+                    Order Food <span class="transform transition-transform group-hover:translate-x-1 ml-1">&rarr;</span>
+                </a>
+            </div>
+
+            <!-- Service 2: Medicines (Matches Blue node from dashboard) -->
+            <div class="bg-white rounded-[24px] border-2 border-qhpBlue/15 p-6 flex flex-col items-center text-center transition duration-300 hover:-translate-y-2 shadow-sm hover:shadow-xl">
+                <div class="w-16 h-16 bg-qhpBlue/10 rounded-2xl flex items-center justify-center text-qhpBlue mb-6">
+                    <!-- Medicine/Capsules Icon -->
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6-6a5.25 5.25 0 117.424 7.424l-6 6a5.25 5.25 0 01-7.424-7.424z"/><path stroke-linecap="round" stroke-linejoin="round" d="M8.5 8.5l7 7"/></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-qhpDark mb-2">Medicines</h3>
+                <p class="text-qhpDark/70 text-sm font-light mb-6 flex-grow">Getting your health supplies is easy. Just send us your prescription or hop on a call with our partner to get your medicines delivered.</p>
+                <a href="/service" class="text-sm font-semibold text-qhpBlue inline-flex items-center group">
+                    Order Medicines <span class="transform transition-transform group-hover:translate-x-1 ml-1">&rarr;</span>
+                </a>
+            </div>
+
+            <!-- Service 3: Grocery Hub (Matches Green node from dashboard) -->
+            <div class="bg-white rounded-[24px] border-2 border-qhpGreen/15 p-6 flex flex-col items-center text-center transition duration-300 hover:-translate-y-2 shadow-sm hover:shadow-xl">
+                <div class="w-16 h-16 bg-qhpGreen/10 rounded-2xl flex items-center justify-center text-qhpGreen mb-6">
+                    <!-- Shopping Cart Icon -->
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"/></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-qhpDark mb-2">Grocery Hub</h3>
+                <p class="text-qhpDark/70 text-sm font-light mb-6 flex-grow">We deliver any groceries, including fresh vegetables, fruits, flours (pindi), or anything else you need right from your preferred store.</p>
+                <a href="/service" class="text-sm font-semibold text-qhpGreen inline-flex items-center group">
+                    Order Groceries <span class="transform transition-transform group-hover:translate-x-1 ml-1">&rarr;</span>
+                </a>
+            </div>
+
+            <!-- Service 4: Express Parcel (Matches Violet node from dashboard) -->
+            <div class="bg-white rounded-[24px] border-2 border-qhpViolet/15 p-6 flex flex-col items-center text-center transition duration-300 hover:-translate-y-2 shadow-sm hover:shadow-xl">
+                <div class="w-16 h-16 bg-qhpViolet/10 rounded-2xl flex items-center justify-center text-qhpViolet mb-6">
+                    <!-- Parcel Box Icon -->
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25"/></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-qhpDark mb-2">Express Parcel</h3>
+                <p class="text-qhpDark/70 text-sm font-light mb-6 flex-grow">Need something sent or collected? We deliver any parcel from anywhere, extending our courier channels across other states too.</p>
+                <a href="/service" class="text-sm font-semibold text-qhpViolet inline-flex items-center group">
+                    Send Parcel <span class="transform transition-transform group-hover:translate-x-1 ml-1">&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. APP DOWNLOAD BANNER -->
+    <div id="download" class="max-w-7xl mx-auto px-6 mb-20">
+        <div class="rounded-[40px] p-8 md:p-12 shadow-sm border border-qhpBlue/15 bg-gradient-to-br from-white to-qhpBgLight flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="max-w-xl text-center md:text-left">
+                <h2 class="text-2xl md:text-4xl font-bold text-qhpBlue mb-4">Download the app now!</h2>
+                <p class="text-qhpDark/70 text-sm md:text-lg font-normal mb-6">
+                    Experience zero-friction operations and absolute delivery accuracy built directly into the custom app interface.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#" class="bg-qhpBlue text-white px-5 py-3 rounded-xl inline-flex items-center space-x-2 text-xs font-medium hover:bg-blue-700 transition transform hover:-translate-y-0.5">
+                        <span>Get it on Google Play</span>
+                    </a>
+                    <a href="#" class="bg-qhpOrange text-white px-5 py-3 rounded-xl inline-flex items-center space-x-2 text-xs font-medium hover:bg-amber-600 transition transform hover:-translate-y-0.5">
+                        <span>Download on App Store</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Scan QR matching branding styling -->
+            <div class="bg-white p-4 rounded-2xl border border-qhpBlue/15 shadow-md flex flex-col items-center justify-center w-44 h-44 shrink-0 transition-transform hover:rotate-3">
+                <div class="w-32 h-32 border-4 border-dashed border-qhpBlue/40 rounded-lg flex items-center justify-center text-center text-[10px] text-qhpBlue px-2 font-medium bg-qhpBgLight">
+                    [Scan QR For Quick Access]
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. ENTERPRISE FOOTER -->
+    <footer class="bg-qhpDark text-white pt-16 pb-8 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-start pb-8 border-b border-white/10 mb-10">
+                <div class="bg-qhpBlue text-white font-bold text-xl px-3 py-1 rounded-lg">QHP</div>
+                <span class="text-lg font-semibold ml-2 tracking-wide text-gray-200">QuickHelpingPartner</span>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-blue-300 mb-4">Company</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">QHP Logistics</a></li>
+                        <li><a href="#" class="hover:text-white transition">District Nodes</a></li>
+                        <li><a href="#" class="hover:text-white transition">Investor Links</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-amber-300 mb-4">Services</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="/service" class="hover:text-white transition">Food Services</a></li>
+                        <li><a href="/service" class="hover:text-white transition">Medicines</a></li>
+                        <li><a href="/service" class="hover:text-white transition">Grocery Hub</a></li>
+                        <li><a href="/service" class="hover:text-white transition">Express Parcel</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-green-300 mb-4">For Partners</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Join the Fleet</a></li>
+                        <li><a href="#" class="hover:text-white transition">Partner Guidelines</a></li>
+                        <li><a href="#" class="hover:text-white transition">App Workspace</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-fuchsia-300 mb-4">Learn More</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Information Security</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Help Desk & Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-white/10 text-[11px] text-gray-500 leading-relaxed">
+                By maintaining interactions across this workspace page, you confirm agreement to our localized Terms of Service, Privacy Policies, and Data Processing Addendums. All regional trademarks, custom structural assets, and icons remain localized under intellectual property specifications.<br/>
+                &copy; 2026 QuickHelpingPartner (QHP) Ltd. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hamburger Navigation Drawer Logic -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            });
+        });
+    </script>
+</body>
+</html>
