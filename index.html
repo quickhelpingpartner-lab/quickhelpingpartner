@@ -76,20 +76,23 @@
         </div>
     </nav>
 
-    <!-- 1. HERO SECTION WITH CLEAR VIDEO BACKGROUND -->
+    <!-- 1. HERO SECTION WITH RESPONSIVE BACKGROUND VIDEO -->
     <div class="relative w-full min-h-[85vh] flex flex-col items-center justify-center bg-black text-white px-6 py-20 overflow-hidden">
         
-        <!-- Video Tag (Full Visibility & High Clarity) -->
+        <!-- Video Tag with Mobile & Desktop Source Separation -->
         <video 
             autoplay 
             loop 
             muted 
             playsinline 
             class="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-80">
-            <source src="https://www.quickhelpingpartnerservice.online/webvideoofhome.mp4" type="video/mp4">
+            <!-- Loaded on screens under 768px (Mobile Devices) -->
+            <source src="https://www.quickhelpingpartnerservice.online/webvideoofhome2.mp4" type="video/mp4" media="(max-width: 767px)">
+            <!-- Loaded on screens 768px and wider (Desktop / Laptop) -->
+            <source src="https://www.quickhelpingpartnerservice.online/webvideoofhome.mp4" type="video/mp4" media="(min-width: 768px)">
         </video>
 
-        <!-- Subtle Dark Tint Layer to Ensure Crisp Text Legibility -->
+        <!-- Subtle Dark Tint Layer for Text Readability -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 z-10"></div>
         
         <!-- Foreground Text & Buttons -->
@@ -100,7 +103,7 @@
                 <span class="text-xl font-medium tracking-wide text-blue-200">QuickHelpingPartner</span>
             </div>
             
-            <!-- Main Headline with Drop Shadows for Ultra Sharpness -->
+            <!-- Headline -->
             <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-6 drop-shadow-md">
                 Andhara's #1 <span class="text-qhpOrange">On-Demand Assistance</span><br class="hidden md:block"/>
                 <span class="text-white">& Delivery App</span>
