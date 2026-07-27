@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Title & Description -->
+    <title>How QHP Medicine Delivery Works | Quick Helping Partner</title>
+    <meta name="description" content="Getting your health supplies is easy with QHP. Send your prescription or consult with our partner pharmacy to get medicines delivered to your door.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Color Palette Extracted Directly From QHP Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        qhpOrange: '#FF8C23',    /* Food Services Accent */
+                        qhpBlue: '#1F64E6',      /* Medicines & Primary UI Accent */
+                        qhpGreen: '#288235',     /* Grocery Hub Accent */
+                        qhpViolet: '#9C27B0',    /* Express Parcel Accent */
+                        qhpDark: '#0A1128',      /* Deep Navy Background */
+                        qhpBgLight: '#F4F7FC',   /* Soft grey-blue background shade */
+                    },
+                    fontFamily: {
+                        sans: ['Lexend', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-qhpBgLight text-qhpDark font-sans antialiased selection:bg-qhpBlue selection:text-white">
+
+    <!-- 1. HERO BANNER -->
+    <section class="relative bg-qhpDark text-white py-20 px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-cover bg-center opacity-20" style="background-image: url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=1920&auto=format&fit=crop');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-qhpDark via-qhpDark/95 to-qhpDark/70 z-10"></div>
+        
+        <div class="relative z-20 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+            <div class="max-w-2xl text-center md:text-left">
+                <!-- QHP Logo Tag -->
+                <div class="mb-6 flex items-center justify-center md:justify-start space-x-2">
+                    <div class="bg-qhpBlue text-white font-bold text-2xl tracking-wider px-4 py-1.5 rounded-xl shadow-lg">QHP</div>
+                    <span class="text-xl font-medium tracking-wide text-blue-200">QuickHelpingPartner</span>
+                </div>
+
+                <div class="inline-flex items-center space-x-2 bg-qhpBlue/20 border border-qhpBlue/40 text-blue-300 font-semibold text-xs px-3.5 py-1.5 rounded-full mb-6">
+                    <span>💊 Health & Pharmacy • Official QHP App & Web Service</span>
+                </div>
+                
+                <h1 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6">
+                    Getting Your <span class="text-qhpBlue">Health Supplies</span> Is Easy—Here’s How QHP Delivers
+                </h1>
+                <p class="text-blue-100 text-base md:text-lg font-light leading-relaxed mb-8">
+                    Just send us your prescription or hop on a call with our partner to get your medicines delivered fast. Learn how transparent time-based pricing and live delivery tracking keep your health needs covered.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="index.html" class="bg-qhpBlue hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 inline-flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        <span>Go to Home Page</span>
+                    </a>
+                    <a href="#how-it-works" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-medium px-6 py-4 rounded-xl backdrop-blur-md transition">
+                        See How It Works
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Service Highlights -->
+            <div class="bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl p-6 w-full md:w-80 shrink-0 text-white shadow-2xl">
+                <h3 class="text-base font-bold text-qhpBlue mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    At A Glance
+                </h3>
+                <ul class="space-y-3.5 text-xs text-blue-100">
+                    <li class="flex items-start">
+                        <span class="text-qhpBlue font-bold mr-2">✓</span>
+                        <span>Easy <b>prescription upload</b> or quick phone call.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-qhpBlue font-bold mr-2">✓</span>
+                        <span><b>₹60 service tax</b> per 30-minute block.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-qhpBlue font-bold mr-2">✓</span>
+                        <span>Direct <b>partner pharmacy consultation</b>.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-qhpBlue font-bold mr-2">✓</span>
+                        <span><b>Live GPS tracking</b> from pharmacy to door.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. TIME-BASED TAXES & PRICING EXPLANATION -->
+    <section id="pricing" class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-semibold uppercase tracking-widest text-qhpBlue block mb-2">TRANSPARENT SERVICE TAX STRUCTURE</span>
+            <h2 class="text-3xl font-bold text-qhpDark">How QHP Calculates Medicine Delivery Taxes</h2>
+            <p class="text-qhpDark/70 text-sm mt-2">Our service tax is calculated strictly on the total time taken from when the delivery partner accepts your request to when your health supplies reach your hands.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Rate Box 1 -->
+            <div class="bg-white rounded-2xl p-6 border-2 border-qhpBlue/20 shadow-sm relative hover:shadow-md transition">
+                <div class="bg-qhpBlue text-white text-[10px] font-bold px-3 py-1 rounded-full absolute -top-3 right-6 tracking-wider">STANDARD TIER</div>
+                <h3 class="text-xl font-bold text-qhpDark mb-1">Up to 30 Minutes</h3>
+                <p class="text-xs text-qhpDark/60 mb-4">Fast nearby pharmacy pickups & essential supplies</p>
+                <div class="text-4xl font-extrabold text-qhpBlue mb-2">₹60 <span class="text-xs font-normal text-qhpDark/60">Service Tax</span></div>
+                <p class="text-xs text-qhpDark/70 leading-relaxed">Applied when total elapsed time from order confirmation to doorstep delivery is within 30 minutes.</p>
+            </div>
+
+            <!-- Rate Box 2 -->
+            <div class="bg-white rounded-2xl p-6 border-2 border-qhpOrange/20 shadow-sm relative hover:shadow-md transition">
+                <div class="bg-qhpOrange text-white text-[10px] font-bold px-3 py-1 rounded-full absolute -top-3 right-6 tracking-wider">MEDIUM TIER</div>
+                <h3 class="text-xl font-bold text-qhpDark mb-1">31 to 60 Minutes</h3>
+                <p class="text-xs text-qhpDark/60 mb-4">Specialty store sourcing or peak demand hours</p>
+                <div class="text-4xl font-extrabold text-qhpOrange mb-2">₹120 <span class="text-xs font-normal text-qhpDark/60">Service Tax</span></div>
+                <p class="text-xs text-qhpDark/70 leading-relaxed">If total pickup and transit time exceeds 30 minutes up to 60 minutes, the service tax becomes ₹120.</p>
+            </div>
+
+            <!-- Rate Box 3 -->
+            <div class="bg-white rounded-2xl p-6 border-2 border-qhpGreen/20 shadow-sm relative hover:shadow-md transition">
+                <div class="bg-qhpGreen text-white text-[10px] font-bold px-3 py-1 rounded-full absolute -top-3 right-6 tracking-wider">EXTENDED TIER</div>
+                <h3 class="text-xl font-bold text-qhpDark mb-1">Every Extra 30 Mins</h3>
+                <p class="text-xs text-qhpDark/60 mb-4">Hard-to-find medicines & out-of-city requests</p>
+                <div class="text-4xl font-extrabold text-qhpGreen mb-2">+₹60 <span class="text-xs font-normal text-qhpDark/60">per 30 mins</span></div>
+                <p class="text-xs text-qhpDark/70 leading-relaxed">For every additional 30 minutes required, an additional ₹60 service tax is systematically added.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. STEP-BY-STEP ORDER LIFECYCLE -->
+    <section id="how-it-works" class="py-16 px-6 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-qhpBlue block mb-2">THE COMPLETE MEDICINE ORDER LIFECYCLE</span>
+                <h2 class="text-3xl font-bold text-qhpDark">How Medicine Delivery Works in QHP</h2>
+                <p class="text-qhpDark/70 text-sm mt-2">Inside the official QHP app, getting your essential health supplies is seamless and reliable.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-qhpBgLight/60 border border-gray-100">
+                    <div class="w-16 h-16 rounded-2xl bg-qhpBlue/10 border-2 border-qhpBlue text-qhpBlue font-extrabold text-xl flex items-center justify-center mb-4 shadow-sm">
+                        1
+                    </div>
+                    <h3 class="font-bold text-base text-qhpDark mb-2">Upload or Call</h3>
+                    <p class="text-xs text-qhpDark/70 leading-relaxed">Simply upload a photo of your doctor's prescription in the app or choose the option to request a callback.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-qhpBgLight/60 border border-gray-100">
+                    <div class="w-16 h-16 rounded-2xl bg-qhpOrange/10 border-2 border-qhpOrange text-qhpOrange font-extrabold text-xl flex items-center justify-center mb-4 shadow-sm">
+                        2
+                    </div>
+                    <h3 class="font-bold text-base text-qhpDark mb-2">Partner Call Consultation</h3>
+                    <p class="text-xs text-qhpDark/70 leading-relaxed">Hop on a quick call with our partner pharmacy to verify exact medicine brands, dosages, and available substitutes.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-qhpBgLight/60 border border-gray-100">
+                    <div class="w-16 h-16 rounded-2xl bg-qhpViolet/10 border-2 border-qhpViolet text-qhpViolet font-extrabold text-xl flex items-center justify-center mb-4 shadow-sm">
+                        3
+                    </div>
+                    <h3 class="font-bold text-base text-qhpDark mb-2">Pickup & Live Tracking</h3>
+                    <p class="text-xs text-qhpDark/70 leading-relaxed">Our QHP partner collects your packed supplies from the pharmacy and enables <b>Live GPS Tracking</b> on your screen.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-qhpBgLight/60 border border-gray-100">
+                    <div class="w-16 h-16 rounded-2xl bg-qhpGreen/10 border-2 border-qhpGreen text-qhpGreen font-extrabold text-xl flex items-center justify-center mb-4 shadow-sm">
+                        4
+                    </div>
+                    <h3 class="font-bold text-base text-qhpDark mb-2">Safe Doorstep Delivery</h3>
+                    <p class="text-xs text-qhpDark/70 leading-relaxed">Your medicines are delivered securely to your doorstep. You pay the actual bill cost plus the clear ₹60/30-min tax tier.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ENTERPRISE FOOTER -->
+    <footer class="bg-qhpDark text-white pt-16 pb-8 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-start pb-8 border-b border-white/10 mb-10">
+                <div class="bg-qhpBlue text-white font-bold text-xl px-3 py-1 rounded-lg">QHP</div>
+                <span class="text-lg font-semibold ml-2 tracking-wide text-gray-200">QuickHelpingPartner</span>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-blue-300 mb-4">Health & Pharmacy</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#how-it-works" class="hover:text-white transition">Medicine Delivery Process</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition">Time Tax Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-amber-300 mb-4">All QHP Services</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="index.html#services" class="hover:text-white transition">Food Services</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition">Medicines Delivery</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition">Grocery Hub</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition">Express Parcel</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-green-300 mb-4">Partners</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Join as Partner Pharmacy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Join as Delivery Fleet</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-fuchsia-300 mb-4">App Links</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="index.html#download" class="hover:text-white transition">Download Android App</a></li>
+                        <li><a href="index.html#download" class="hover:text-white transition">Download iOS App</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-white/10 text-[11px] text-gray-500 leading-relaxed text-center sm:text-left">
+                &copy; 2026 QuickHelpingPartner (QHP) Ltd. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
